@@ -1,6 +1,6 @@
 == Sender
 
-http://rubygems.org/gems/weakhash
+http://rubygems.org/gems/core-source
 
 == DESCRIPTION:
 
