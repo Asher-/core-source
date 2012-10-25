@@ -5,3 +5,7 @@ Initial fork
 === 0.2.0 2010-10-28
 
 Moved to gemspec
+
+=== 0.2.7 2012-10-25
+
+Added minitar dependency. Not sure why this wasn't already causing issues.
