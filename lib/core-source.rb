@@ -32,10 +32,13 @@ def ensure_core_headers( headers )
     ruby_dir = "ruby-" + RUBY_VERSION.to_s + "-p" + RUBY_PATCHLEVEL.to_s
   end
 
+  version_path = RUBY_VERSION.to_f == 2.0 ? '2.0' : '1.9'
+
+
   #
   # Download the headers
   #
-  uri_path = "http://ftp.ruby-lang.org/pub/ruby/1.9/" + ruby_dir + ".tar.gz"
+  uri_path = "http://ftp.ruby-lang.org/pub/ruby/#{version_path}/" + ruby_dir + ".tar.gz"
   Tempfile.open("ruby-src") { |temp|
 
     temp.binmode
