@@ -1,6 +1,6 @@
 == Sender
 
-http://rubygems.org/gems/core-source
+http://rubygems.org/gems/core_source
 
 == DESCRIPTION:
 
@@ -10,7 +10,7 @@ core source.
 
 This fork was created because the existing ruby_core_source takes over
 the build definition, preventing definition of CFLAGS and other settings
-that mkmf requires be defined by an enclosing block. 
+that mkmf requires be defined by an enclosing block.
 
 == INSTALL:
 

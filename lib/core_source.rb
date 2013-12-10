@@ -1,3 +1,9 @@
+if RUBY_VERSION.to_f < 1.9
+  def require_relative(file)
+    require File.expand_path('../' + file, __FILE__)
+  end
+end
+
 
 require_relative 'contrib/uri_ext.rb'
 require_relative 'contrib/progressbar.rb'
@@ -32,10 +38,15 @@ def ensure_core_headers( headers )
     ruby_dir = "ruby-" + RUBY_VERSION.to_s + "-p" + RUBY_PATCHLEVEL.to_s
   end
 
+  version_path  = '1.8' if RUBY_VERSION.to_f >= 1.8
+  version_path  = '1.9' if RUBY_VERSION.to_f >= 1.9
+  version_path  = '2.0' if RUBY_VERSION.to_f >= 2.0
+
+
   #
   # Download the headers
   #
-  uri_path = "http://ftp.ruby-lang.org/pub/ruby/1.9/" + ruby_dir + ".tar.gz"
+  uri_path = "http://ftp.ruby-lang.org/pub/ruby/#{version_path}/" + ruby_dir + ".tar.gz"
   Tempfile.open("ruby-src") { |temp|
 
     temp.binmode
