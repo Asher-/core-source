@@ -3,7 +3,7 @@ require 'date'
 Gem::Specification.new do |spec|
 
   spec.name                      =  'core_source'
-  spec.version                   =  '0.2.8'
+  spec.version                   =  '0.2.9'
 
   spec.summary                   =  "Fork of ruby_core_source modified to support CFLAGS and permit use of whichever build system (mkmf, rpmkmf, or other modules) while utilizing core source."
   spec.description               =  "Fork of ruby_core_source modified to support CFLAGS and permit use of whichever build system (mkmf, rpmkmf, or other modules) while utilizing core source. This fork was created because the existing ruby_core_source takes over the build definition, preventing definition of CFLAGS and other settings that mkmf requires be defined by an enclosing block."
